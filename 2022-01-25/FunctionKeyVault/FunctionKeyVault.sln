@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionEnvVariables", "FunctionEnvVariables\FunctionEnvVariables.csproj", "{A2FAB776-C44A-4D9E-BC54-CB0D64C2FE0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionWithKeyVault", "FunctionWithKeyVault\FunctionWithKeyVault.csproj", "{8B850FA8-DF2E-4899-B4D6-80271C67BB5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2FAB776-C44A-4D9E-BC54-CB0D64C2FE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FAB776-C44A-4D9E-BC54-CB0D64C2FE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FAB776-C44A-4D9E-BC54-CB0D64C2FE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FAB776-C44A-4D9E-BC54-CB0D64C2FE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B850FA8-DF2E-4899-B4D6-80271C67BB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B850FA8-DF2E-4899-B4D6-80271C67BB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B850FA8-DF2E-4899-B4D6-80271C67BB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B850FA8-DF2E-4899-B4D6-80271C67BB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F626E85-ECC3-4FE3-8414-BE2E8C8B16C1}
+	EndGlobalSection
+EndGlobal
