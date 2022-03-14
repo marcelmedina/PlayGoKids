@@ -35,21 +35,36 @@ namespace CQRSAndMediatrSampleApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] ProductDto product)
         {
+            // Create product
             var result = await _mediator.Send(new AddOrUpdateProductCommand() {ProductDto = product});
+
+            // Notify consumers
+            await _mediator.Publish(new PublishProductNotify() {Message = $"Product {product.Sku} created"});
+
             return Ok(result);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] ProductDto product)
         {
+            // Update product
             var result = await _mediator.Send(new AddOrUpdateProductCommand() { ProductDto = product });
+
+            // Notify consumers
+            await _mediator.Publish(new PublishProductNotify() { Message = $"Product {product.Sku} updated" });
+
             return Ok(result);
         }
 
         [HttpDelete]
         public async Task<IActionResult> Remove(string productSku)
         {
+            // Remove product
             var result = await _mediator.Send(new DeleteProductCommand() {Sku = productSku});
+
+            // Notify consumers
+            await _mediator.Publish(new PublishProductNotify() { Message = $"Product {productSku} removed" });
+
             return Ok(result);
         }
 
