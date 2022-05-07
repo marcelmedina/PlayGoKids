@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutOfProcFunc", "OutOfProcFunc\OutOfProcFunc.csproj", "{797FD001-D456-47A4-922E-B3E4859FAC0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InProcFunc", "InProcFunc\InProcFunc.csproj", "{84EC0975-E3B0-4A74-998D-0FDAE40C30FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyVaultSecretFunc", "KeyVaultSecretFunc\KeyVaultSecretFunc.csproj", "{03EA57BF-79DD-4BE3-9890-DFB669392B75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenApi", "OpenApi", "{22BEBE5B-BC14-442D-AF46-B5FB41D4075E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KeyVault", "KeyVault", "{A8BFEA57-0644-445C-9EA7-09E5084D0282}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797FD001-D456-47A4-922E-B3E4859FAC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797FD001-D456-47A4-922E-B3E4859FAC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797FD001-D456-47A4-922E-B3E4859FAC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797FD001-D456-47A4-922E-B3E4859FAC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EC0975-E3B0-4A74-998D-0FDAE40C30FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EC0975-E3B0-4A74-998D-0FDAE40C30FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EC0975-E3B0-4A74-998D-0FDAE40C30FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EC0975-E3B0-4A74-998D-0FDAE40C30FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EA57BF-79DD-4BE3-9890-DFB669392B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EA57BF-79DD-4BE3-9890-DFB669392B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EA57BF-79DD-4BE3-9890-DFB669392B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EA57BF-79DD-4BE3-9890-DFB669392B75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{797FD001-D456-47A4-922E-B3E4859FAC0D} = {22BEBE5B-BC14-442D-AF46-B5FB41D4075E}
+		{84EC0975-E3B0-4A74-998D-0FDAE40C30FA} = {22BEBE5B-BC14-442D-AF46-B5FB41D4075E}
+		{03EA57BF-79DD-4BE3-9890-DFB669392B75} = {A8BFEA57-0644-445C-9EA7-09E5084D0282}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57160E41-9CCD-4266-A5D4-A6FCDC1BCB0C}
+	EndGlobalSection
+EndGlobal
