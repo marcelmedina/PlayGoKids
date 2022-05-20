@@ -14,11 +14,11 @@ namespace AutoMapperDemo
                 .ForMember(dest => dest.FName, opt => opt.MapFrom(src => src.FirstName))
                 .ForMember(dest => dest.LName, opt => opt.MapFrom(src => src.LastName))
                 .ForMember(dest => dest.Description, opt => opt.Ignore())
-                .ReverseMap()
-                .AfterMap((dest, src) =>
+                .AfterMap((_, dest) =>
                 {
                     dest.DateCreated = DateTime.Now;
-                });
+                })
+                .ReverseMap();
 
             CreateMap<UserAddress, UserAddressViewModel>();
         }
