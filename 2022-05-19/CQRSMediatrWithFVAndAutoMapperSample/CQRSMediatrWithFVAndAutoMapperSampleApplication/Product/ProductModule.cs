@@ -11,6 +11,7 @@ namespace CQRSMediatrWithFVAndAutoMapperSampleApplication.Product
             serviceCollection.AddMediatR(typeof(ProductModule).Assembly);
             serviceCollection.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
             serviceCollection.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+            serviceCollection.AddAutoMapper(typeof(ProductModule));
 
             return serviceCollection;
         }

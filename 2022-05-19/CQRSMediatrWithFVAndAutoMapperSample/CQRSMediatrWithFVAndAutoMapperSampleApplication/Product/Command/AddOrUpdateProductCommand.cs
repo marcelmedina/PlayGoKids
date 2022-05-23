@@ -1,4 +1,5 @@
-﻿using CQRSMediatrWithFVAndAutoMapperSampleApplication.Product.Data;
+﻿using AutoMapper;
+using CQRSMediatrWithFVAndAutoMapperSampleApplication.Product.Data;
 using CQRSMediatrWithFVAndAutoMapperSampleApplication.Product.Dto;
 using MediatR;
 
@@ -11,10 +12,12 @@ namespace CQRSMediatrWithFVAndAutoMapperSampleApplication.Product.Command
 
     public class AddOrUpdateProductCommandHandler : IRequestHandler<AddOrUpdateProductCommand, bool>
     {
+        private readonly IMapper _mapper;
         private readonly ProductsInMemory _productsInMemory;
 
-        public AddOrUpdateProductCommandHandler()
+        public AddOrUpdateProductCommandHandler(IMapper mapper)
         {
+            _mapper = mapper;
             _productsInMemory = new ProductsInMemory();
         }
 
@@ -28,26 +31,17 @@ namespace CQRSMediatrWithFVAndAutoMapperSampleApplication.Product.Command
                 var index = _productsInMemory.ProductDtos.FindIndex(p => p.Sku.Equals(request.ProductRequestDto.Sku));
                 var productDto = _productsInMemory.ProductDtos[index];
 
-                productDto.Name = request.ProductRequestDto.Name;
-                productDto.Sku = request.ProductRequestDto.Sku;
-                productDto.Quantity = request.ProductRequestDto.Quantity;
-                productDto.Price = request.ProductRequestDto.Price;
-                productDto.DateModified = DateTime.UtcNow;
+                var existingProductDto = _mapper.Map(request.ProductRequestDto, productDto);
 
-                _productsInMemory.ProductDtos[index] = productDto;
+                _productsInMemory.ProductDtos[index] = existingProductDto;
 
                 return Task.FromResult(true);
             }
 
-            _productsInMemory.ProductDtos.Add(new ProductDto()
-            {
-                Name = request.ProductRequestDto.Name,
-                Sku = request.ProductRequestDto.Sku,
-                Quantity = request.ProductRequestDto.Quantity,
-                Price = request.ProductRequestDto.Price,
-                DateCreated = DateTime.UtcNow,
-                DateModified = DateTime.UtcNow
-            });
+            var newProductDto = _mapper.Map<ProductDto>(request.ProductRequestDto);
+            newProductDto.DateCreated = newProductDto.DateModified;
+
+            _productsInMemory.ProductDtos.Add(newProductDto);
 
             return Task.FromResult(true);
         }
