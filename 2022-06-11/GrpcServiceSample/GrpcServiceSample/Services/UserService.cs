@@ -14,6 +14,7 @@ namespace GrpcServiceSample.Services
         {
             return Task.FromResult(new UserResponse
             {
+                UserId = 1,
                 FirstName = "John",
                 LastName = "Smith",
                 Address = new Address()
