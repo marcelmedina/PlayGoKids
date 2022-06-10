@@ -15,15 +15,15 @@ namespace GrpcServiceSample.Services
             return Task.FromResult(new UserResponse
             {
                 UserId = 1,
-                FirstName = "John",
-                LastName = "Smith",
+                FirstName = "Bill",
+                LastName = "Lumbergh",
                 Address = new Address()
                 {
                     Number = "1A",
-                    StreetName = "John Smith Street",
-                    Suburb = "Some suburb",
-                    City = "The city",
-                    Country = "Some country"
+                    StreetName = "Initech Street",
+                    Suburb = "Initech Suburb",
+                    City = "Austin, Texas",
+                    Country = "USA"
                 }
             });
         }
