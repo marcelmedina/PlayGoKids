@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceSample";
+
+package user;
+
+import "protos/address.proto";
+
+service UserService {
+	rpc GetUserDetails(UserRequest) returns (UserResponse);
+}
+
+message UserRequest {
+	int32 user_id = 1;
+}
+
+message UserResponse {
+	int32 user_id = 1;
+	string first_name = 2;
+	string last_name = 3;
+	address.Address address = 4;
+}
