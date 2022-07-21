@@ -7,9 +7,5 @@ namespace GrpcDomain.Requests
     {
         [ProtoMember(1)]
         public string Name { get; set; }
-
-        public HelloRequest()
-        {
-        }
     }
 }
