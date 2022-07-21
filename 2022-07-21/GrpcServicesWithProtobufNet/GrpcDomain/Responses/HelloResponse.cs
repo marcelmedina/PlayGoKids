@@ -7,9 +7,5 @@ namespace GrpcDomain.Responses
     {
         [ProtoMember(1)]
         public string Message { get; set; }
-
-        public HelloResponse()
-        {
-        }
     }
 }
