@@ -7,6 +7,7 @@ namespace GrpcDomain.Interfaces
     [ServiceContract]
     public interface IUserService
     {
+        [OperationContract]
         Task<UserResponse> GetUserAsync(UserRequest request);
     }
 }
