@@ -45,8 +45,6 @@
         deploy:
           pool:
             vmImage: 'ubuntu-latest'
-          variables:
-          - group: 'sample-${{ parameters.env }}'
           steps:
           - checkout: self
           
