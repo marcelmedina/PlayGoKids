@@ -1,0 +1,67 @@
+trigger:
+- main
+
+variables:
+  buildConfiguration: 'Release'
+
+stages:
+
+- stage: 'Build'
+  displayName: 'Build the solution'
+  jobs:
+    - template: template-build.yml
+      parameters:
+        appName: 'web'
+        csproj: '**/web.csproj'
+
+- stage: 'DeployDev'
+  displayName: 'Deploy to Dev'
+  jobs:
+  - template: template-deploy.yml
+    parameters:
+      appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
+      resourceLocation: 'australiaeast'
+      env: 'dev'
+      envFullName: 'Development'
+      
+- stage: 'DeployTest'
+  displayName: 'Deploy to Test'
+  jobs:
+  - template: template-deploy.yml
+    parameters:
+      appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
+      resourceLocation: 'australiaeast'
+      env: 'tst'
+      envFullName: 'Test'
+
+- stage: 'DeployUat'
+  displayName: 'Deploy to Uat'
+  jobs:
+  - template: template-deploy.yml
+    parameters:
+      appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
+      resourceLocation: 'australiaeast'
+      env: 'uat'
+      envFullName: 'UAT'
+
+- stage: 'DeployProd'
+  displayName: 'Deploy to Prod'
+  jobs:
+  - template: template-deploy.yml
+    parameters:
+      appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
+      resourceLocation: 'australiaeast'
+      env: 'prd'
+      envFullName: 'Production'

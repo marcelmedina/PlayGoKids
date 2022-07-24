@@ -1,0 +1,82 @@
+  parameters:
+  - name: appName 
+    type: string
+    default: false
+
+  - name: serviceConnection 
+    type: string
+    default: false
+
+  - name: subscriptionId 
+    type: string
+    default: false
+
+  - name: resourceGroupName 
+    type: string
+    default: false
+    
+  - name: resourceLocation 
+    type: string
+    default: false
+  
+  - name: env 
+    type: string
+    default: false
+    values:
+    - dev
+    - tst
+    - uat
+    - prd
+  
+  - name: envFullName 
+    type: string
+    default: false
+    values:
+    - Development
+    - Test
+    - UAT
+    - Production
+
+  jobs:
+  - deployment: DeployTo${{parameters.env}}
+    environment: '${{parameters.envFullName}}'
+    strategy:
+      runOnce:
+        deploy:
+          pool:
+            vmImage: 'ubuntu-latest'
+          steps:
+          - checkout: self
+          
+          #Download the artifacts created in build stage
+          - task: DownloadBuildArtifacts@0
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'drop'
+              downloadPath: '$(System.ArtifactsDirectory)'
+
+          #Create Infrastructure dependencies required
+          - task: AzureResourceManagerTemplateDeployment@3
+            displayName: 'Provision Azure Resources'
+            inputs:
+              deploymentScope: 'Resource Group'
+              azureResourceManagerConnection: '${{ parameters.serviceConnection }}'
+              subscriptionId: '${{ parameters.subscriptionId }}'
+              resourceGroupName: '${{ parameters.resourceGroupName }}'
+              location: '${{parameters.resourceLocation}}'
+              templateLocation: 'Linked artifact'
+              csmFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.bicep'
+              csmParametersFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
+              overrideParameters: '-resourceGroupName "${{ parameters.resourceGroupName }}"'
+              deploymentMode: 'Incremental'
+
+          #Deploy .Net code to Azure Web app
+          - task: AzureWebApp@1
+            displayName: 'Deploy ${{ parameters.appName }} to Azure Web app'
+            inputs:
+              azureSubscription: '${{ parameters.subscriptionId }}'
+              appType: 'webAppLinux'
+              appName: 'sample-web-${{ parameters.env }}'
+              package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              runtimeStack: 'DOTNETCORE|6.0'

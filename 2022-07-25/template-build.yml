@@ -1,0 +1,49 @@
+  parameters:
+  - name: appName 
+    type: string
+    default: false
+  
+  - name: csproj
+    type: string
+    default: false
+
+  jobs:
+  - job: 'Build'
+    displayName: 'Build job'
+
+    pool:
+      vmImage: 'ubuntu-latest'
+
+    steps:
+    # Create the build artifacts for the core connector infrastructure
+    - task: CopyFiles@2
+      displayName: Copy deployment files
+      inputs:
+        SourceFolder: 'deploy'
+        Contents: '*.*'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/deploy'
+
+    # Use dotnet version
+    - task: UseDotNet@2
+      displayName: 'Use .NET 6 sdk'
+      inputs:
+        packageType: sdk
+        version: '6.x'
+
+    # Build and create the zip package
+    - task: DotNetCoreCLI@2
+      displayName: 'Building ${{ parameters.appName }}'    
+      inputs:
+        command: 'publish'
+        publishWebProjects: false
+        projects: ${{ parameters.csproj }}
+        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/${{ parameters.appName }}'
+        modifyOutputPath: false
+        zipAfterPublish: true
+
+    # Publish artifacts
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: '${{ parameters.appName }}'
