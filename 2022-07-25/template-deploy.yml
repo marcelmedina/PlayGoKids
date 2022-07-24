@@ -2,18 +2,6 @@
   - name: appName 
     type: string
     default: false
-
-  - name: serviceConnection 
-    type: string
-    default: false
-
-  - name: subscriptionId 
-    type: string
-    default: false
-
-  - name: resourceGroupName 
-    type: string
-    default: false
     
   - name: resourceLocation 
     type: string
@@ -45,6 +33,8 @@
         deploy:
           pool:
             vmImage: 'ubuntu-latest'
+          variables:
+          - group: 'sample-${{ parameters.env }}'
           steps:
           - checkout: self
           
@@ -61,14 +51,14 @@
             displayName: 'Provision Azure Resources'
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '${{ parameters.serviceConnection }}'
-              subscriptionId: '${{ parameters.subscriptionId }}'
-              resourceGroupName: '${{ parameters.resourceGroupName }}'
+              azureResourceManagerConnection: '$(ServiceConnection)'
+              subscriptionId: '$(SubscriptionId)'
+              resourceGroupName: '$(ResourceGroupName)'
               location: '${{parameters.resourceLocation}}'
               templateLocation: 'Linked artifact'
               csmFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.bicep'
               csmParametersFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
-              overrideParameters: '-resourceGroupName "${{ parameters.resourceGroupName }}"'
+              overrideParameters: '-resourceGroupName "$(ResourceGroupName)"'
               deploymentMode: 'Incremental'
 
           #Deploy .Net code to Azure Web app

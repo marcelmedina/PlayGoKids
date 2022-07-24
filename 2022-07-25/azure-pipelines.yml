@@ -20,9 +20,6 @@ stages:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'dev'
       envFullName: 'Development'
@@ -33,9 +30,6 @@ stages:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'tst'
       envFullName: 'Test'
@@ -46,9 +40,6 @@ stages:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'uat'
       envFullName: 'UAT'
@@ -59,9 +50,6 @@ stages:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'prd'
       envFullName: 'Production'
