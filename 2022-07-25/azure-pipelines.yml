@@ -16,40 +16,60 @@ stages:
 
 - stage: 'DeployDev'
   displayName: 'Deploy to Dev'
+  variables:
+  - group: sample-dev
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'dev'
       envFullName: 'Development'
       
 - stage: 'DeployTest'
   displayName: 'Deploy to Test'
+  variables:
+  - group: sample-tst
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'tst'
       envFullName: 'Test'
 
 - stage: 'DeployUat'
   displayName: 'Deploy to Uat'
+  variables:
+  - group: sample-uat
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'uat'
       envFullName: 'UAT'
 
 - stage: 'DeployProd'
   displayName: 'Deploy to Prod'
+  variables:
+  - group: sample-prd
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
+      serviceConnection: '$(ServiceConnection)'
+      subscriptionId: '$(SubscriptionId)'
+      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'prd'
       envFullName: 'Production'

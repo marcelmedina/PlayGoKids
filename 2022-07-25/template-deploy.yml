@@ -2,6 +2,18 @@
   - name: appName 
     type: string
     default: false
+
+  - name: serviceConnection 
+    type: string
+    default: false
+
+  - name: subscriptionId 
+    type: string
+    default: false
+  
+  - name: resourceGroupName 
+    type: string
+    default: false
     
   - name: resourceLocation 
     type: string
@@ -51,9 +63,9 @@
             displayName: 'Provision Azure Resources'
             inputs:
               deploymentScope: 'Resource Group'
-              azureResourceManagerConnection: '$(ServiceConnection)'
-              subscriptionId: '$(SubscriptionId)'
-              resourceGroupName: '$(ResourceGroupName)'
+              azureResourceManagerConnection: '${{ parameters.serviceConnection }}'
+              subscriptionId: '${{ parameters.subscriptionId }}'
+              resourceGroupName: '{{ parameters.resourceGroupName }}'
               location: '${{parameters.resourceLocation}}'
               templateLocation: 'Linked artifact'
               csmFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.bicep'
