@@ -64,7 +64,7 @@
           - task: AzureWebApp@1
             displayName: 'Deploy ${{ parameters.appName }} to Azure Web app'
             inputs:
-              azureSubscription: '${{ parameters.subscriptionId }}'
+              azureSubscription: '$(SubscriptionId)'
               appType: 'webAppLinux'
               appName: 'sample-web-${{ parameters.env }}'
               package: '$(System.DefaultWorkingDirectory)/**/*.zip'
