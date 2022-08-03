@@ -5,7 +5,6 @@ variables:
   buildConfiguration: 'Release'
 
 stages:
-
 - stage: 'Build'
   displayName: 'Build the solution'
   jobs:
@@ -16,60 +15,54 @@ stages:
 
 - stage: 'DeployDev'
   displayName: 'Deploy to Dev'
-  variables:
-  - group: sample-dev
+  condition: succeeded()
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'dev'
       envFullName: 'Development'
-      
+      variableGroupName: 'sample-dev'
+
 - stage: 'DeployTest'
   displayName: 'Deploy to Test'
-  variables:
-  - group: sample-tst
+  condition: succeeded()
+  dependsOn:
+    - DeployDev
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'tst'
       envFullName: 'Test'
+      variableGroupName: 'sample-tst'
 
 - stage: 'DeployUat'
   displayName: 'Deploy to Uat'
-  variables:
-  - group: sample-uat
+  condition: succeeded()
+  dependsOn:
+    - DeployTest
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'uat'
       envFullName: 'UAT'
+      variableGroupName: 'sample-uat'
 
 - stage: 'DeployProd'
   displayName: 'Deploy to Prod'
-  variables:
-  - group: sample-prd
+  condition: succeeded()
+  dependsOn:
+    - DeployUat
   jobs:
   - template: template-deploy.yml
     parameters:
       appName: 'web'
-      serviceConnection: '$(ServiceConnection)'
-      subscriptionId: '$(SubscriptionId)'
-      resourceGroupName: '$(ResourceGroupName)'
       resourceLocation: 'australiaeast'
       env: 'prd'
       envFullName: 'Production'
+      variableGroupName: 'sample-prd'

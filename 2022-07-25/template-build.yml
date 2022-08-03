@@ -1,11 +1,9 @@
   parameters:
   - name: appName 
     type: string
-    default: false
   
   - name: csproj
     type: string
-    default: false
 
   jobs:
   - job: 'Build'
