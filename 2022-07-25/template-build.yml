@@ -19,7 +19,7 @@
       inputs:
         SourceFolder: 'deploy'
         Contents: '*.*'
-        TargetFolder: '$(Pipeline.Workspace)/deploy'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/2022-07-25/deploy'
 
     # Use dotnet version
     - task: UseDotNet@2
