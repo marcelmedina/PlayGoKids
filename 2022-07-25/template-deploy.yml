@@ -43,7 +43,7 @@
               buildType: 'current'
               downloadType: 'single'
               artifactName: 'drop'
-              downloadPath: '$(System.ArtifactsDirectory)'
+              downloadPath: '$(Build.ArtifactStagingDirectory)'
 
           #Create Infrastructure dependencies required
           - task: AzureResourceManagerTemplateDeployment@3
@@ -55,8 +55,8 @@
               resourceGroupName: '$(ResourceGroupName)'
               location: '${{parameters.resourceLocation}}'
               templateLocation: 'Linked artifact'
-              csmFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.bicep'
-              csmParametersFile: '$(System.ArtifactsDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
+              csmFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.bicep'
+              csmParametersFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
               overrideParameters: '-resourceGroupName "$(ResourceGroupName)"'
               deploymentMode: 'Incremental'
 
