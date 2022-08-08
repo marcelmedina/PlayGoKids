@@ -17,7 +17,7 @@
     - task: CopyFiles@2
       displayName: Copy deployment files
       inputs:
-        SourceFolder: 'deploy'
+        SourceFolder: '2022-07-25/deploy'
         Contents: '*.*'
         TargetFolder: '$(Build.ArtifactStagingDirectory)/2022-07-25/deploy'
 
