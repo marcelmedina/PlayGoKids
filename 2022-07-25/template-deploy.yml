@@ -49,22 +49,19 @@
           - task: AzureResourceManagerTemplateDeployment@3
             displayName: 'Provision Azure Resources'
             inputs:
-              deploymentScope: 'Resource Group'
               azureResourceManagerConnection: '$(ServiceConnection)'
               subscriptionId: '$(SubscriptionId)'
               resourceGroupName: '$(ResourceGroupName)'
               location: '${{parameters.resourceLocation}}'
-              templateLocation: 'Linked artifact'
               csmFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.bicep'
               csmParametersFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
               overrideParameters: '-resourceGroupName "$(ResourceGroupName)"'
-              deploymentMode: 'Incremental'
 
           #Deploy .Net code to Azure Web app
           - task: AzureWebApp@1
             displayName: 'Deploy ${{ parameters.appName }} to Azure Web app'
             inputs:
-              azureSubscription: '$(SubscriptionId)'
+              azureSubscription: '$(Subscription)'
               appType: 'webAppLinux'
               appName: 'sample-web-${{ parameters.env }}'
               package: '$(System.DefaultWorkingDirectory)/**/*.zip'
