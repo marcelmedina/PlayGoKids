@@ -19,7 +19,7 @@
       inputs:
         SourceFolder: '2022-07-25/deploy'
         Contents: '*.*'
-        TargetFolder: '$(Build.ArtifactStagingDirectory)/2022-07-25/deploy'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/drop/deploy'
 
     # Use dotnet version
     - task: UseDotNet@2
@@ -35,13 +35,12 @@
         command: 'publish'
         publishWebProjects: false
         projects: ${{ parameters.csproj }}
-        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/${{ parameters.appName }}'
+        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)/drop/${{ parameters.appName }}'
         modifyOutputPath: false
         zipAfterPublish: true
 
     # Publish artifacts
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/drop'
         ArtifactName: 'drop'
-        publishLocation: '${{ parameters.appName }}'

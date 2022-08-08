@@ -43,7 +43,7 @@
               buildType: 'current'
               downloadType: 'single'
               artifactName: 'drop'
-              downloadPath: '$(Build.ArtifactStagingDirectory)'
+              downloadPath: '$(Build.ArtifactStagingDirectory)/drop'
 
           #Create Infrastructure dependencies required
           - task: AzureResourceManagerTemplateDeployment@3
