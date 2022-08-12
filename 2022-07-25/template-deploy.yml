@@ -62,7 +62,7 @@
             displayName: 'Deploy ${{ parameters.appName }} to Azure Web app'
             inputs:
               azureSubscription: '$(Subscription)'
-              appType: 'webAppLinux'
+              appType: 'webApp'
               appName: 'sample-web-${{parameters.env}}'
               package: '$(Pipeline.Workspace)/**/*.zip'
               runtimeStack: 'DOTNETCORE|6.0'
