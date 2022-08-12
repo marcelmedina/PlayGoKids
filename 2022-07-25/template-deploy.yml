@@ -64,5 +64,5 @@
               azureSubscription: '$(Subscription)'
               appType: 'webAppLinux'
               appName: 'sample-web-${{parameters.env}}'
-              package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              package: '$(Pipeline.Workspace)/**/*.zip'
               runtimeStack: 'DOTNETCORE|6.0'
