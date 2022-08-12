@@ -36,14 +36,6 @@
         deploy:
           steps:
           - checkout: self
-          
-          #Download the artifacts created in build stage
-          #- task: DownloadBuildArtifacts@0
-          #  inputs:
-          #    buildType: 'current'
-          #    downloadType: 'single'
-          #    artifactName: 'drop'
-          #    downloadPath: '$(Build.ArtifactStagingDirectory)/drop'
 
           #Create Infrastructure dependencies required
           - task: AzureResourceManagerTemplateDeployment@3
