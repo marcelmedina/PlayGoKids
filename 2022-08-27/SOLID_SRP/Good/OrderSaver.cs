@@ -1,17 +1,20 @@
 using SOLID_SRP.Models;
 
-public class OrderSaver
+namespace SOLID_SRP
 {
-    private readonly Order _order;
-
-    public OrderSaver(Order order)
+    public class OrderSaver
     {
-        _order = order;
-    }
+        private readonly Order _order;
 
-    public void Save()
-    {
-        //TODO: save order
-        Console.WriteLine($"save order: {_order.OrderNumber}");
+        public OrderSaver(Order order)
+        {
+            _order = order;
+        }
+
+        public void Save()
+        {
+            //TODO: save order
+            Console.WriteLine($"save order: {_order.OrderNumber}");
+        }
     }
 }

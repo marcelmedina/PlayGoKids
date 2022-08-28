@@ -1,17 +1,20 @@
 using SOLID_SRP.Models;
 
-public class OrderNotifier
+namespace SOLID_SRP
 {
-    private readonly Order _order;
-
-    public OrderNotifier(Order order)
+    public class OrderNotifier
     {
-        _order = order;
-    }
+        private readonly Order _order;
 
-    public void Notify()
-    {
-        //TODO: send notification
-        Console.WriteLine($"send notification: {_order.OrderNumber}");
+        public OrderNotifier(Order order)
+        {
+            _order = order;
+        }
+
+        public void Notify()
+        {
+            //TODO: send notification
+            Console.WriteLine($"send notification: {_order.OrderNumber}");
+        }
     }
 }

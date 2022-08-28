@@ -1,17 +1,20 @@
 using SOLID_SRP.Models;
 
-public class OrderValidator
+namespace SOLID_SRP
 {
-    private readonly Order _order;
-
-    public OrderValidator(Order order)
+    public class OrderValidator
     {
-        _order = order;
-    }
+        private readonly Order _order;
 
-    public void Validate()
-    {
-        //TODO: validate order
-        Console.WriteLine($"validate order: {_order.OrderNumber}");
+        public OrderValidator(Order order)
+        {
+            _order = order;
+        }
+
+        public void Validate()
+        {
+            //TODO: validate order
+            Console.WriteLine($"validate order: {_order.OrderNumber}");
+        }
     }
 }
