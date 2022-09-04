@@ -36,14 +36,6 @@
         deploy:
           steps:
           - checkout: self
-          
-          #Download the artifacts created in build stage
-          #- task: DownloadBuildArtifacts@0
-          #  inputs:
-          #    buildType: 'current'
-          #    downloadType: 'single'
-          #    artifactName: 'drop'
-          #    downloadPath: '$(Build.ArtifactStagingDirectory)/drop'
 
           #Create Infrastructure dependencies required
           - task: AzureResourceManagerTemplateDeployment@3
@@ -53,8 +45,8 @@
               subscriptionId: '$(SubscriptionId)'
               resourceGroupName: '$(ResourceGroupName)'
               location: '${{parameters.resourceLocation}}'
-              csmFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.bicep'
-              csmParametersFile: '$(Build.ArtifactStagingDirectory)/drop/deploy/azuredeploy.parameters.${{ parameters.env }}.json'
+              csmFile: '$(Pipeline.Workspace)/drop/deploy/azuredeploy.bicep'
+              csmParametersFile: '$(Pipeline.Workspace)/drop/deploy/azuredeploy.parameters.${{parameters.env}}.json'
               overrideParameters: '-resourceGroupName "$(ResourceGroupName)"'
 
           #Deploy .Net code to Azure Web app
@@ -62,7 +54,7 @@
             displayName: 'Deploy ${{ parameters.appName }} to Azure Web app'
             inputs:
               azureSubscription: '$(Subscription)'
-              appType: 'webAppLinux'
-              appName: 'sample-web-${{ parameters.env }}'
-              package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              appType: 'webApp'
+              appName: 'sample-web-${{parameters.env}}'
+              package: '$(Pipeline.Workspace)/**/*.zip'
               runtimeStack: 'DOTNETCORE|6.0'

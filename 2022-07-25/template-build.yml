@@ -13,7 +13,7 @@
       vmImage: 'ubuntu-latest'
 
     steps:
-    # Create the build artifacts for the core connector infrastructure
+    # Copy the deployment files
     - task: CopyFiles@2
       displayName: Copy deployment files
       inputs:
