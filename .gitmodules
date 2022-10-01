@@ -10,3 +10,6 @@
 [submodule "2022-09-13/solid-liskov-substitution-principle"]
 	path = 2022-09-13/solid-liskov-substitution-principle
 	url = https://github.com/marcelmedina/solid-liskov-substitution-principle.git
+[submodule "2022-09-05/durable-functions-monitor-pattern"]
+	path = 2022-09-05/durable-functions-monitor-pattern
+	url = https://github.com/marcelmedina/durable-functions-monitor-pattern.git
