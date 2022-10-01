@@ -49,3 +49,6 @@
 [submodule "2022-04-04/cqrs-mediatr-with-fluentvalidation-sample"]
 	path = 2022-04-04/cqrs-mediatr-with-fluentvalidation-sample
 	url = https://github.com/marcelmedina/cqrs-mediatr-with-fluentvalidation-sample.git
+[submodule "2022-03-27/cqrs-mediatr-sample"]
+	path = 2022-03-27/cqrs-mediatr-sample
+	url = https://github.com/marcelmedina/cqrs-mediatr-sample.git
