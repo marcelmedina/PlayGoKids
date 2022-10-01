@@ -40,3 +40,6 @@
 [submodule "2022-05-19/cqrs-mediatr-with-fluentvalidation-and-automapper-sample"]
 	path = 2022-05-19/cqrs-mediatr-with-fluentvalidation-and-automapper-sample
 	url = https://github.com/marcelmedina/cqrs-mediatr-with-fluentvalidation-and-automapper-sample.git
+[submodule "2022-04-14/convert-arm-template-to-bicep-deploy-azure-devops-part4-test"]
+	path = 2022-04-14/convert-arm-template-to-bicep-deploy-azure-devops-part4-test
+	url = https://github.com/marcelmedina/convert-arm-template-to-bicep-deploy-azure-devops-part4-test.git
