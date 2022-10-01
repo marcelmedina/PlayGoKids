@@ -1,0 +1,3 @@
+[submodule "2022-10-02/durable-functions-aggregator-pattern"]
+	path = 2022-10-02/durable-functions-aggregator-pattern
+	url = https://github.com/marcelmedina/durable-functions-aggregator-pattern.git
