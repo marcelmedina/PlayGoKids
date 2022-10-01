@@ -1,3 +1,6 @@
 [submodule "2022-10-02/durable-functions-aggregator-pattern"]
 	path = 2022-10-02/durable-functions-aggregator-pattern
 	url = https://github.com/marcelmedina/durable-functions-aggregator-pattern.git
+[submodule "2022-09-27/durable-functions-human-interaction-pattern"]
+	path = 2022-09-27/durable-functions-human-interaction-pattern
+	url = https://github.com/marcelmedina/durable-functions-human-interaction-pattern.git
