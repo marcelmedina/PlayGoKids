@@ -55,3 +55,6 @@
 [submodule "2022-03-21/durable-functions-fan-out-in-pattern"]
 	path = 2022-03-21/durable-functions-fan-out-in-pattern
 	url = https://github.com/marcelmedina/durable-functions-fan-out-in-pattern.git
+[submodule "2022-03-15/cqrs-mediatr-autofac-sample"]
+	path = 2022-03-15/cqrs-mediatr-autofac-sample
+	url = https://github.com/marcelmedina/cqrs-mediatr-autofac-sample.git
