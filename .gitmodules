@@ -67,3 +67,6 @@
 [submodule "2022-02-13/open-telemetry-azure"]
 	path = 2022-02-13/open-telemetry-azure
 	url = https://github.com/marcelmedina/open-telemetry-azure.git
+[submodule "2022-01-25/azure-function-keyvault"]
+	path = 2022-01-25/azure-function-keyvault
+	url = https://github.com/marcelmedina/azure-function-keyvault.git
