@@ -58,3 +58,6 @@
 [submodule "2022-03-15/cqrs-mediatr-autofac-sample"]
 	path = 2022-03-15/cqrs-mediatr-autofac-sample
 	url = https://github.com/marcelmedina/cqrs-mediatr-autofac-sample.git
+[submodule "2022-03-04/durable-functions-chaining-pattern"]
+	path = 2022-03-04/durable-functions-chaining-pattern
+	url = https://github.com/marcelmedina/durable-functions-chaining-pattern.git
