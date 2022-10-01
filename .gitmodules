@@ -25,3 +25,6 @@
 [submodule "2022-07-21/grpc-services-with-protobuf-net"]
 	path = 2022-07-21/grpc-services-with-protobuf-net
 	url = https://github.com/marcelmedina/grpc-services-with-protobuf-net.git
+[submodule "2022-07-12/fluent-validation-azure-function"]
+	path = 2022-07-12/fluent-validation-azure-function
+	url = https://github.com/marcelmedina/fluent-validation-azure-function.git
