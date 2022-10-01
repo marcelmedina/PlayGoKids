@@ -13,3 +13,6 @@
 [submodule "2022-09-05/durable-functions-monitor-pattern"]
 	path = 2022-09-05/durable-functions-monitor-pattern
 	url = https://github.com/marcelmedina/durable-functions-monitor-pattern.git
+[submodule "2022-08-28/solid-open-closed-principle"]
+	path = 2022-08-28/solid-open-closed-principle
+	url = https://github.com/marcelmedina/solid-open-closed-principle.git
