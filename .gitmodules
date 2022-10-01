@@ -37,3 +37,6 @@
 [submodule "2022-05-19/auto-mapper-net6"]
 	path = 2022-05-19/auto-mapper-net6
 	url = https://github.com/marcelmedina/auto-mapper-net6.git
+[submodule "2022-05-19/cqrs-mediatr-with-fluentvalidation-and-automapper-sample"]
+	path = 2022-05-19/cqrs-mediatr-with-fluentvalidation-and-automapper-sample
+	url = https://github.com/marcelmedina/cqrs-mediatr-with-fluentvalidation-and-automapper-sample.git
