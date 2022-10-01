@@ -64,3 +64,6 @@
 [submodule "2022-02-20/open-telemetry-exporter"]
 	path = 2022-02-20/open-telemetry-exporter
 	url = https://github.com/marcelmedina/open-telemetry-exporter.git
+[submodule "2022-02-13/open-telemetry-azure"]
+	path = 2022-02-13/open-telemetry-azure
+	url = https://github.com/marcelmedina/open-telemetry-azure.git
