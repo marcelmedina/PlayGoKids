@@ -43,3 +43,6 @@
 [submodule "2022-04-14/convert-arm-template-to-bicep-deploy-azure-devops-part4-test"]
 	path = 2022-04-14/convert-arm-template-to-bicep-deploy-azure-devops-part4-test
 	url = https://github.com/marcelmedina/convert-arm-template-to-bicep-deploy-azure-devops-part4-test.git
+[submodule "2022-04-04/fluent-validation-net6"]
+	path = 2022-04-04/fluent-validation-net6
+	url = https://github.com/marcelmedina/fluent-validation-net6.git
