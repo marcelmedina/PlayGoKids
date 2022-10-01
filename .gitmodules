@@ -7,3 +7,6 @@
 [submodule "2022-09-17/solid-interface-segregation-principle"]
 	path = 2022-09-17/solid-interface-segregation-principle
 	url = https://github.com/marcelmedina/solid-interface-segregation-principle.git
+[submodule "2022-09-13/solid-liskov-substitution-principle"]
+	path = 2022-09-13/solid-liskov-substitution-principle
+	url = https://github.com/marcelmedina/solid-liskov-substitution-principle.git
