@@ -34,3 +34,6 @@
 [submodule "2022-06-11/grpc-service-sample"]
 	path = 2022-06-11/grpc-service-sample
 	url = https://github.com/marcelmedina/grpc-service-sample.git
+[submodule "2022-05-19/auto-mapper-net6"]
+	path = 2022-05-19/auto-mapper-net6
+	url = https://github.com/marcelmedina/auto-mapper-net6.git
