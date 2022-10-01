@@ -46,3 +46,6 @@
 [submodule "2022-04-04/fluent-validation-net6"]
 	path = 2022-04-04/fluent-validation-net6
 	url = https://github.com/marcelmedina/fluent-validation-net6.git
+[submodule "2022-04-04/cqrs-mediatr-with-fluentvalidation-sample"]
+	path = 2022-04-04/cqrs-mediatr-with-fluentvalidation-sample
+	url = https://github.com/marcelmedina/cqrs-mediatr-with-fluentvalidation-sample.git
