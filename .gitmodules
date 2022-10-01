@@ -61,3 +61,6 @@
 [submodule "2022-03-04/durable-functions-chaining-pattern"]
 	path = 2022-03-04/durable-functions-chaining-pattern
 	url = https://github.com/marcelmedina/durable-functions-chaining-pattern.git
+[submodule "2022-02-20/open-telemetry-exporter"]
+	path = 2022-02-20/open-telemetry-exporter
+	url = https://github.com/marcelmedina/open-telemetry-exporter.git
