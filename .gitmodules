@@ -16,3 +16,6 @@
 [submodule "2022-08-28/solid-open-closed-principle"]
 	path = 2022-08-28/solid-open-closed-principle
 	url = https://github.com/marcelmedina/solid-open-closed-principle.git
+[submodule "2022-08-27/solid-single-responsibility-principle"]
+	path = 2022-08-27/solid-single-responsibility-principle
+	url = https://github.com/marcelmedina/solid-single-responsibility-principle.git
