@@ -4,3 +4,6 @@
 [submodule "2022-09-27/durable-functions-human-interaction-pattern"]
 	path = 2022-09-27/durable-functions-human-interaction-pattern
 	url = https://github.com/marcelmedina/durable-functions-human-interaction-pattern.git
+[submodule "2022-09-17/solid-interface-segregation-principle"]
+	path = 2022-09-17/solid-interface-segregation-principle
+	url = https://github.com/marcelmedina/solid-interface-segregation-principle.git
