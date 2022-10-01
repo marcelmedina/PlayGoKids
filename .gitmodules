@@ -52,3 +52,6 @@
 [submodule "2022-03-27/cqrs-mediatr-sample"]
 	path = 2022-03-27/cqrs-mediatr-sample
 	url = https://github.com/marcelmedina/cqrs-mediatr-sample.git
+[submodule "2022-03-21/durable-functions-fan-out-in-pattern"]
+	path = 2022-03-21/durable-functions-fan-out-in-pattern
+	url = https://github.com/marcelmedina/durable-functions-fan-out-in-pattern.git
