@@ -28,3 +28,6 @@
 [submodule "2022-07-12/fluent-validation-azure-function"]
 	path = 2022-07-12/fluent-validation-azure-function
 	url = https://github.com/marcelmedina/fluent-validation-azure-function.git
+[submodule "2022-06-17/durable-functions-async-http-apis-pattern"]
+	path = 2022-06-17/durable-functions-async-http-apis-pattern
+	url = https://github.com/marcelmedina/durable-functions-async-http-apis-pattern.git
