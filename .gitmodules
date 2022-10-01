@@ -31,3 +31,6 @@
 [submodule "2022-06-17/durable-functions-async-http-apis-pattern"]
 	path = 2022-06-17/durable-functions-async-http-apis-pattern
 	url = https://github.com/marcelmedina/durable-functions-async-http-apis-pattern.git
+[submodule "2022-06-11/grpc-service-sample"]
+	path = 2022-06-11/grpc-service-sample
+	url = https://github.com/marcelmedina/grpc-service-sample.git
