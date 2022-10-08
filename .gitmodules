@@ -73,3 +73,6 @@
 [submodule "2021-12-21/azure-function-dependency-injection-sample"]
 	path = 2021-12-21/azure-function-dependency-injection-sample
 	url = https://github.com/marcelmedina/azure-function-dependency-injection-sample.git
+[submodule "2022-10-08/durable-functions-aggregator-pattern"]
+	path = 2022-10-08/durable-functions-aggregator-pattern
+	url = https://github.com/marcelmedina/durable-functions-aggregator-pattern.git
