@@ -76,3 +76,6 @@
 [submodule "2022-10-08/durable-functions-aggregator-pattern"]
 	path = 2022-10-08/durable-functions-aggregator-pattern
 	url = https://github.com/marcelmedina/durable-functions-aggregator-pattern.git
+[submodule "2022-11-23/durable-functions-net7-out-of-process"]
+	path = 2022-11-23/durable-functions-net7-out-of-process
+	url = https://github.com/marcelmedina/durable-functions-net7-out-of-process.git
