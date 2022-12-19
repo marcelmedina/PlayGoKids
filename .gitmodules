@@ -85,3 +85,6 @@
 [submodule "2022-12-14/grpc-net7-transcoding-json"]
 	path = 2022-12-14/grpc-net7-transcoding-json
 	url = https://github.com/marcelmedina/grpc-net7-transcoding-json.git
+[submodule "2022-12-20/migrate-aspnet-framework-to-aspnet-core-with-yarp"]
+	path = 2022-12-20/migrate-aspnet-framework-to-aspnet-core-with-yarp
+	url = https://github.com/marcelmedina/migrate-aspnet-framework-to-aspnet-core-with-yarp.git
