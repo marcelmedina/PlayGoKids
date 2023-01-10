@@ -88,3 +88,6 @@
 [submodule "2022-12-20/migrate-aspnet-framework-to-aspnet-core-with-yarp"]
 	path = 2022-12-20/migrate-aspnet-framework-to-aspnet-core-with-yarp
 	url = https://github.com/marcelmedina/migrate-aspnet-framework-to-aspnet-core-with-yarp.git
+[submodule "2023-01-11/azure-functions-trigger-bindings-queue"]
+	path = 2023-01-11/azure-functions-trigger-bindings-queue
+	url = https://github.com/marcelmedina/azure-functions-trigger-bindings-queue.git
