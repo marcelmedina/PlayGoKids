@@ -94,3 +94,6 @@
 [submodule "2023-02-14/azure-functions-trigger-bindings-blob"]
 	path = 2023-02-14/azure-functions-trigger-bindings-blob
 	url = https://github.com/marcelmedina/azure-functions-trigger-bindings-blob.git
+[submodule "2023-01-11/azure-functions-trigger-bindings-queue-isolated"]
+	path = 2023-01-11/azure-functions-trigger-bindings-queue-isolated
+	url = https://github.com/marcelmedina/azure-functions-trigger-bindings-queue-isolated.git
