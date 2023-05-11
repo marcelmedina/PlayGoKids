@@ -100,3 +100,6 @@
 [submodule "2023-02-14/azure-functions-trigger-bindings-blob-isolated"]
 	path = 2023-02-14/azure-functions-trigger-bindings-blob-isolated
 	url = https://github.com/marcelmedina/azure-functions-trigger-bindings-blob-isolated.git
+[submodule "2023-05-11/convert-dab-config-to-swa-config"]
+	path = 2023-05-11/convert-dab-config-to-swa-config
+	url = https://github.com/marcelmedina/convert-dab-config-to-swa-config
