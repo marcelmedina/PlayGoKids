@@ -103,3 +103,6 @@
 [submodule "2023-05-11/convert-dab-config-to-swa-config"]
 	path = 2023-05-11/convert-dab-config-to-swa-config
 	url = https://github.com/marcelmedina/convert-dab-config-to-swa-config
+[submodule "2023-05-27/azure-functions-http-status-code"]
+	path = 2023-05-27/azure-functions-http-status-code
+	url = https://github.com/marcelmedina/azure-functions-http-status-code.git
