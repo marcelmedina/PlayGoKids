@@ -106,3 +106,6 @@
 [submodule "2023-05-27/azure-functions-http-status-code"]
 	path = 2023-05-27/azure-functions-http-status-code
 	url = https://github.com/marcelmedina/azure-functions-http-status-code.git
+[submodule "2023-06-13/azure-functions-in-container-apps-with-dapr"]
+	path = 2023-06-13/azure-functions-in-container-apps-with-dapr
+	url = https://github.com/marcelmedina/azure-functions-in-container-apps-with-dapr.git
