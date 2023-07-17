@@ -109,3 +109,6 @@
 [submodule "2023-06-13/azure-functions-in-container-apps-with-dapr"]
 	path = 2023-06-13/azure-functions-in-container-apps-with-dapr
 	url = https://github.com/marcelmedina/azure-functions-in-container-apps-with-dapr.git
+[submodule "2023-07-18/masstransit-rabbitmq-net7"]
+	path = 2023-07-18/masstransit-rabbitmq-net7
+	url = https://github.com/marcelmedina/masstransit-rabbitmq-net7.git
