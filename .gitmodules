@@ -118,3 +118,6 @@
 [submodule "2023-08-02/fluent-validation-azure-function-isolated"]
 	path = 2023-08-02/fluent-validation-azure-function-isolated
 	url = https://github.com/marcelmedina/fluent-validation-azure-function-isolated.git
+[submodule "2023-08-19/tax-calculator-visitor-pattern"]
+	path = 2023-08-19/tax-calculator-visitor-pattern
+	url = https://github.com/marcelmedina/tax-calculator-visitor-pattern.git
