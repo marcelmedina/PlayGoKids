@@ -121,3 +121,12 @@
 [submodule "2023-08-19/tax-calculator-visitor-pattern"]
 	path = 2023-08-19/tax-calculator-visitor-pattern
 	url = https://github.com/marcelmedina/tax-calculator-visitor-pattern.git
+[submodule "2023-09-03/dotnet7-azure-function-isolated-polly-retry"]
+	path = 2023-09-03/dotnet7-azure-function-isolated-polly-retry
+	url = https://github.com/marcelmedina/dotnet7-azure-function-isolated-polly-retry.git
+[submodule "2023-09-03/dotnet7-azure-function-isolated-polly-await-retry"]
+	path = 2023-09-03/dotnet7-azure-function-isolated-polly-await-retry
+	url = https://github.com/marcelmedina/dotnet7-azure-function-isolated-polly-await-retry
+[submodule "2023-09-03/dotnet7-azure-function-isolated-polly-await-retry-jitter"]
+	path = 2023-09-03/dotnet7-azure-function-isolated-polly-await-retry-jitter
+	url = https://github.com/marcelmedina/dotnet7-azure-function-isolated-polly-await-retry-jitter.git
