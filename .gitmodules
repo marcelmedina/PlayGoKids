@@ -130,6 +130,9 @@
 [submodule "2023-09-03/dotnet7-azure-function-isolated-polly-await-retry-jitter"]
 	path = 2023-09-03/dotnet7-azure-function-isolated-polly-await-retry-jitter
 	url = https://github.com/marcelmedina/dotnet7-azure-function-isolated-polly-await-retry-jitter.git
+[submodule "2023-09-23/azure-functions-isolated-correlationid"]
+	path = 2023-09-23/azure-functions-isolated-correlationid
+	url = https://github.com/marcelmedina/azure-functions-isolated-correlationid
 [submodule "2023-11-03/dotnet8-docker-container"]
 	path = 2023-11-03/dotnet8-docker-container
 	url = https://github.com/marcelmedina/dotnet8-docker-container.git
