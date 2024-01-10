@@ -136,3 +136,6 @@
 [submodule "2023-11-03/dotnet8-docker-container"]
 	path = 2023-11-03/dotnet8-docker-container
 	url = https://github.com/marcelmedina/dotnet8-docker-container.git
+[submodule "2024-01-11/dotnet8-azure-function-ready2run"]
+	path = 2024-01-11/dotnet8-azure-function-ready2run
+	url = https://github.com/marcelmedina/dotnet8-azure-function-ready2run.git
