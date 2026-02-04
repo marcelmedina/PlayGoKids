@@ -139,3 +139,6 @@
 [submodule "2024-01-11/dotnet8-azure-function-ready2run"]
 	path = 2024-01-11/dotnet8-azure-function-ready2run
 	url = https://github.com/marcelmedina/dotnet8-azure-function-ready2run.git
+[submodule "2026-02-02/dotnet10-mcp-server-console"]
+	path = 2026-02-02/dotnet10-mcp-server-console
+	url = https://github.com/marcelmedina/dotnet10-mcp-server-console.git
